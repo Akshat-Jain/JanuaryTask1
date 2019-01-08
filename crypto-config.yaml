@@ -17,19 +17,6 @@ OrdererOrgs:
     # ---------------------------------------------------------------------------
     Specs:
       - Hostname: orderer
-      - Hostname: orderer1
-
-  - Name: Orderer2
-    Domain: example2.com
-    # ---------------------------------------------------------------------------
-    # "Specs" - See PeerOrgs below for complete description
-    # ---------------------------------------------------------------------------
-    Specs:
-      - Hostname: orderer
-      - Hostname: orderer1
-      - Hostname: orderer2
-      - Hostname: orderer3
-
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
 # ---------------------------------------------------------------------------
@@ -83,7 +70,7 @@ PeerOrgs:
     # Count: The number of user accounts _in addition_ to Admin
     # ---------------------------------------------------------------------------
     Users:
-      Count: 5
+      Count: 1
   # ---------------------------------------------------------------------------
   # Org2: See "Org1" for full specification
   # ---------------------------------------------------------------------------
@@ -93,4 +80,4 @@ PeerOrgs:
     Template:
       Count: 3
     Users:
-      Count: 10
+      Count: 1

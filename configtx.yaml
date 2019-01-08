@@ -41,31 +41,6 @@ Organizations:
                 Type: Signature
                 Rule: "OR('OrdererMSP.admin')"
 
-    - &OrdererOrg2
-        # DefaultOrg defines the organization which is used in the sampleconfig
-        # of the fabric.git development environment
-        Name: OrdererOrg2
-
-        # ID to load the MSP definition as
-        ID: OrdererMSP2
-
-        # MSPDir is the filesystem path which contains the MSP configuration
-        MSPDir: crypto-config/ordererOrganizations/example2.com/msp
-
-        # Policies defines the set of policies at this level of the config tree
-        # For organization policies, their canonical path is usually
-        #   /Channel/<Application|Orderer>/<OrgName>/<PolicyName>
-        Policies:
-            Readers:
-                Type: Signature
-                Rule: "OR('OrdererMSP2.member')"
-            Writers:
-                Type: Signature
-                Rule: "OR('OrdererMSP2.member')"
-            Admins:
-                Type: Signature
-                Rule: "OR('OrdererMSP2.admin')"
-
     - &Org1
         # DefaultOrg defines the organization which is used in the sampleconfig
         # of the fabric.git development environment
@@ -330,7 +305,6 @@ Profiles:
             <<: *OrdererDefaults
             Organizations:
                 - *OrdererOrg
-                - *OrdererOrg2
             Capabilities:
                 <<: *OrdererCapabilities
         Consortiums:
@@ -361,14 +335,12 @@ Profiles:
 
             Organizations:
             - *OrdererOrg
-            - *OrdererOrg2
             Capabilities:
                 <<: *OrdererCapabilities
         Application:
             <<: *ApplicationDefaults
             Organizations:
             - <<: *OrdererOrg
-            - <<: *OrdererOrg2
         Consortiums:
             SampleConsortium:
                 Organizations:

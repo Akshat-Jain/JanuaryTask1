@@ -1,2 +1,7 @@
-# JanuaryTask1
-Hyperledger Fabric: Creating multiple organisations in single machine and trying to upgrade/downgrade nodes, organisations, etc using CLI
+## Build Your First Network (BYFN)
+
+The directions for using this are documented in the Hyperledger Fabric
+["Build Your First Network"](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html) tutorial.
+
+*NOTE:* After navigating to the documentation, choose the documentation version that matches your version of Fabric
+
